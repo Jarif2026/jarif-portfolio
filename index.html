@@ -225,15 +225,56 @@
         </div>
     </section>
 
-    <!-- 6. SKILLS SECTION -->
+    <!-- 6. SKILLS SECTION (Updated with image skills & previous skills) -->
     <section id="skills" class="py-5 bg-white">
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2 class="fw-bold display-5">Skills & Technical Expertise</h2>
-                <p class="text-muted">Artificial Intelligence, Entrepreneurship, and Mathematical Logic</p>
+                <p class="text-muted">Artificial Intelligence, Web Development, Entrepreneurship, and Mathematical Logic</p>
                 <div class="heading-line bg-primary mx-auto"></div>
             </div>
 
+            <!-- Core Competencies Cards (From Image Style) -->
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="card border-0 shadow-sm p-3 rounded-4 bg-light h-100 hover-shadow">
+                        <div class="fs-1 text-orange mb-2"><i class="bi bi-file-earmark-code-fill text-danger"></i></div>
+                        <h5 class="fw-bold text-dark fs-6 mb-0">HTML</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="card border-0 shadow-sm p-3 rounded-4 bg-light h-100 hover-shadow">
+                        <div class="fs-1 mb-2"><i class="bi bi-filetype-css text-primary"></i></div>
+                        <h5 class="fw-bold text-dark fs-6 mb-0">CSS</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="card border-0 shadow-sm p-3 rounded-4 bg-light h-100 hover-shadow">
+                        <div class="fs-1 mb-2"><i class="bi bi-filetype-js text-warning"></i></div>
+                        <h5 class="fw-bold text-dark fs-6 mb-0">JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="card border-0 shadow-sm p-3 rounded-4 bg-light h-100 hover-shadow">
+                        <div class="fs-1 mb-2"><i class="bi bi-git text-danger"></i></div>
+                        <h5 class="fw-bold text-dark fs-6 mb-0">Git & GitHub</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="card border-0 shadow-sm p-3 rounded-4 bg-light h-100 hover-shadow">
+                        <div class="fs-1 mb-2"><i class="bi bi-phone-fill text-purple" style="color: #6f42c1;"></i></div>
+                        <h5 class="fw-bold text-dark fs-6 mb-0">UI & UX</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="card border-0 shadow-sm p-3 rounded-4 bg-light h-100 hover-shadow">
+                        <div class="fs-1 mb-2"><i class="bi bi-speedometer2 text-success"></i></div>
+                        <h5 class="fw-bold text-dark fs-6 mb-0">Web Performance</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Bars & Badges (Previous Skills) -->
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-sm p-4 rounded-4 bg-light">
@@ -284,18 +325,19 @@
                 <div class="col-lg-6">
                     <div class="p-4 bg-light rounded-4 shadow-sm border border-1 border-light">
                         <h4 class="fw-bold mb-3 text-dark">Expertise Highlights</h4>
-                        <p class="text-muted mb-4">Combining AI specialization at DIU with entrepreneurial leadership and competitive logic.</p>
+                        <p class="text-muted mb-4">Combining AI specialization at DIU with web development, entrepreneurial leadership, and competitive logic.</p>
                         
                         <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-primary px-3 py-2 fs-6">Entrepreneur</span>
+                            <span class="badge bg-primary px-3 py-2 fs-6">HTML / CSS / JS</span>
+                            <span class="badge bg-dark px-3 py-2 fs-6">Git & GitHub</span>
+                            <span class="badge bg-dark px-3 py-2 fs-6">UI & UX Design</span>
+                            <span class="badge bg-dark px-3 py-2 fs-6">Web Performance</span>
+                            <span class="badge bg-dark px-3 py-2 fs-6">Entrepreneur</span>
                             <span class="badge bg-dark px-3 py-2 fs-6">CEO & Founder</span>
-                            <span class="badge bg-dark px-3 py-2 fs-6">Engineering Mentorship</span>
                             <span class="badge bg-dark px-3 py-2 fs-6">Artificial Intelligence</span>
                             <span class="badge bg-dark px-3 py-2 fs-6">Competitive Programming</span>
-                            <span class="badge bg-dark px-3 py-2 fs-6">Real-Life Problem Solving</span>
                             <span class="badge bg-dark px-3 py-2 fs-6">Math Olympiad Skills</span>
                             <span class="badge bg-dark px-3 py-2 fs-6">National Debate Champion</span>
-                            <span class="badge bg-dark px-3 py-2 fs-6">DIU Undergraduate</span>
                         </div>
                     </div>
                 </div>
@@ -484,15 +526,15 @@
                             </div>
                             <div class="col-12">
                                 <label for="subject" class="form-label fw-bold">Subject</label>
-                                <input type="text" class="form-control form-control-lg fs-6" id="subject" placeholder="DIU Academic / Business Inquiry / Collaboration" required>
+                                <input type="text" class="form-control form-control-lg fs-6" id="subject" placeholder="Project inquiry, mentorship, etc." required>
                             </div>
                             <div class="col-12">
                                 <label for="message" class="form-label fw-bold">Message</label>
                                 <textarea class="form-control form-control-lg fs-6" id="message" rows="4" placeholder="Write your message here..." required></textarea>
                             </div>
-                            <div class="col-12 text-center mt-3">
-                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 shadow fw-bold">
-                                    <i class="bi bi-send me-2"></i>Send Message
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill fw-bold shadow-sm">
+                                    <i class="bi bi-send-fill me-2"></i> Send Message
                                 </button>
                             </div>
                         </div>
@@ -502,21 +544,7 @@
         </div>
     </section>
 
-    <!-- 9. FOOTER -->
-    <footer class="bg-dark text-white py-4 border-top border-secondary">
-        <div class="container text-center">
-            <div class="mb-3 d-flex justify-content-center gap-4 fs-4">
-                <a href="https://www.facebook.com/md.jafrul.islam.jarif.2025" target="_blank" class="text-white hover-primary"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.linkedin.com/in/md-jafrul-islam-jarif" target="_blank" class="text-white hover-primary"><i class="bi bi-linkedin"></i></a>
-                <a href="https://youtube.com/@mathforprogrammers2026?si=CKu2e2j1acBb84B4" target="_blank" class="text-danger"><i class="bi bi-youtube"></i></a>
-                <a href="https://wa.me/88015221409932" target="_blank" class="text-success"><i class="bi bi-whatsapp"></i></a>
-            </div>
-            <p class="mb-1 text-light fw-medium">&copy; 2026 Md. Jafrul Islam Jarif. All rights reserved.</p>
-            <p class="mb-0 text-muted small">Created, Designed & Owned by <strong>Md. Jafrul Islam Jarif</strong> (CEO & Founder, Jarif's Classroom)</p>
-        </div>
-    </footer>
-
     <!-- Bootstrap 5 JS Bundle CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.5net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
