@@ -87,16 +87,42 @@ img {
 }
 
 /* ==========================================================================
-   Hero Section
+   Hero Section with 3-4 Color Motion & Up-Down Floating Effects
    ========================================================================== */
 .bg-gradient-dark {
-    background: radial-gradient(circle at top right, #1a233a 0%, #0a0f1d 100%);
+    background: linear-gradient(270deg, #0a0f1d, #1a233a, #0d6efd, #6f42c1, #0a0f1d);
+    background-size: 400% 400%;
+    animation: heroMultiColorMotion 10s ease infinite;
+}
+
+@keyframes heroMultiColorMotion {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hero Left Text Content Motion (Up & Down Floating) */
+#hero .col-lg-7 {
+    animation: heroTextMotion 4s ease-in-out infinite;
+}
+
+@keyframes heroTextMotion {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
 }
 
 .hero-img-wrapper {
     position: relative;
     max-width: 380px;
     width: 100%;
+    animation: heroImageMotion 5s ease-in-out infinite;
+}
+
+@keyframes heroImageMotion {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
 }
 
 .hero-img {
