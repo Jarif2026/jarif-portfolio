@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Jafrul Islam Jarif | Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS Styles -->
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --accent-cyan: #00f2fe;
+            --accent-purple: #7000ff;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            background-color: rgba(11, 15, 25, 0.9) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link {
+            color: var(--text-muted) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-cyan) !important;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Card Styling */
+        .custom-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+            color: #ffffff;
+            font-weight: 600;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            opacity: 0.9;
+            transform: scale(1.03);
+            color: #ffffff;
+        }
+
+        .btn-outline-custom {
+            border: 2px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            font-weight: 600;
+            padding: 10px 26px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--accent-cyan);
+            color: #000;
+        }
+
+        /* Skill Badges */
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 4px;
+        }
+
+        /* Section Headings */
+        .heading-line {
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: 2px;
+            margin-top: 8px;
+        }
+
+        /* Profile Image */
+        .profile-img-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-img {
+            border-radius: 24px;
+            border: 3px solid var(--accent-cyan);
+            box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+            object-fit: cover;
+        }
+
+        /* Form Controls */
+        .form-control {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+
+    <!-- ================= NAVBAR SECTION ================= -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 text-gradient" href="#hero">
+                &lt;Jarif /&gt;
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center pt-5">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row g-5">
+                <!-- Hero Left Column: Bio -->
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill mb-3">
+                        <i class="bi bi-code-slash me-1"></i> Student & Web Developer
+                    </span>
+                    <h1 class="display-4 fw-bold mb-3">
+                        Hi, I'm <span class="text-gradient">Md. Jafrul Islam Jarif</span>
+                    </h1>
+                    <p class="lead text-secondary mb-4">
+                        Passionate Computer Science student and web developer. Experienced in building responsive web applications using HTML5, CSS3, JavaScript, and Bootstrap.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#projects" class="btn btn-custom">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline-custom">Contact Me</a>
+                    </div>
+                    
+                    <!-- Quick Stats / Highlights -->
+                    <div class="row g-3 mt-4 pt-3 border-top border-secondary border-opacity-25">
+                        <div class="col-4">
+                            <h3 class="fw-bold text-gradient mb-0">10+</h3>
+                            <small class="text-secondary">Projects Completed</small>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold text-gradient mb-0">3+</h3>
+                            <small class="text-secondary">Years Coding</small>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold text-gradient mb-0">100%</h3>
+                            <small class="text-secondary">Dedicated Work</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column: Photo -->
+                <div class="col-lg-5 text-center">
+                    <div class="profile-img-container">
+                        <img src="jafrul islam jarif.png" alt="Jafrul Islam Jarif" class="img-fluid profile-img" style="max-width: 330px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ME SECTION ================= -->
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <div class="mb-5">
+                <h2 class="fw-bold display-6 mb-1">About Me</h2>
+                <div class="heading-line"></div>
+            </div>
+            
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="custom-card p-4">
+                        <h4 class="fw-bold text-gradient mb-3"><i class="bi bi-person-workspace me-2"></i> Who I Am</h4>
+                        <p class="text-secondary lh-lg mb-3">
+                            I am an undergraduate student in Computer Science & Engineering. My passion lies in web development, interactive software design, and solving complex algorithmic problems.
+                        </p>
+                        <p class="text-secondary lh-lg mb-0">
+                            Along with coding, I actively participate in Math & Physics Olympiads and community STEM mentorship. I enjoy crafting clean code and modern front-end design interfaces.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="custom-card p-4">
+                        <h4 class="fw-bold text-gradient mb-3"><i class="bi bi-mortarboard-fill me-2"></i> Education & Achievements</h4>
+                        <ul class="list-unstyled text-secondary lh-lg mb-0">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-info me-2 mt-1"></i>
+                                <div>
+                                    <strong class="text-light">Undergraduate CS Student</strong> - Daffodil International University
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-info me-2 mt-1"></i>
+                                <div>
+                                    <strong class="text-light">HSC Alumnus</strong> - Saint Joseph Higher Secondary School
+                                </div>
+                            </li>
+                            <li class="mb-0 d-flex align-items-start">
+                                <i class="bi bi-check-circle-fill text-info me-2 mt-1"></i>
+                                <div>
+                                    <strong class="text-light">Olympiad Participant</strong> - Math & Physics Competitions
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="py-5">
+        <div class="container py-4">
+            <div class="mb-5">
+                <h2 class="fw-bold display-6 mb-1">My Skills</h2>
+                <div class="heading-line"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Front-End Skills -->
+                <div class="col-md-6">
+                    <div class="custom-card p-4 h-100">
+                        <h4 class="fw-bold text-info mb-4"><i class="bi bi-laptop me-2"></i> Front-End Development</h4>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>HTML5 / Semantic Markup</span>
+                                <span class="text-info">95%</span>
+                            </div>
+                            <div class="progress" style="height: 8px; background: rgba(255,255,255,0.1);">
+                                <div class="progress-bar bg-info" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>CSS3 / Flexbox & Grid</span>
+                                <span class="text-info">90%</span>
+                            </div>
+                            <div class="progress" style="height: 8px; background: rgba(255,255,255,0.1);">
+                                <div class="progress-bar bg-info" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Bootstrap 5 Framework</span>
+                                <span class="text-info">90%</span>
+                            </div>
+                            <div class="progress" style="height: 8px; background: rgba(255,255,255,0.1);">
+                                <div class="progress-bar bg-info" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-0">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>JavaScript Basics</span>
+                                <span class="text-info">75%</span>
+                            </div>
+                            <div class="progress" style="height: 8px; background: rgba(255,255,255,0.1);">
+                                <div class="progress-bar bg-info" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical & Soft Skills -->
+                <div class="col-md-6">
+                    <div class="custom-card p-4 h-100">
+                        <h4 class="fw-bold text-purple mb-4" style="color: #a29bfe;"><i class="bi bi-tools me-2"></i> Tools & Knowledge</h4>
+                        
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-badge"><i class="bi bi-git me-1"></i> Git & GitHub</span>
+                            <span class="skill-badge"><i class="bi bi-filetype-code me-1"></i> C / C++ Programming</span>
+                            <span class="skill-badge"><i class="bi bi-braces me-1"></i> Data Structures</span>
+                            <span class="skill-badge"><i class="bi bi-aspect-ratio me-1"></i> Responsive Web Design</span>
+                            <span class="skill-badge"><i class="bi bi-bug me-1"></i> Code Debugging</span>
+                            <span class="skill-badge"><i class="bi bi-palette me-1"></i> UI/UX Basics</span>
+                            <span class="skill-badge"><i class="bi bi-people me-1"></i> Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects" class="py-5">
+        <div class="container py-4">
+            <div class="mb-5">
+                <h2 class="fw-bold display-6 mb-1">Featured Projects</h2>
+                <div class="heading-line"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Project Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card h-100 d-flex flex-column overflow-hidden">
+                        <img src="urban riders 1.jpg" alt="Urban Riders Project" class="img-fluid" style="height: 200px; object-fit: cover;">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h5 class="fw-bold text-light">Urban Riders App</h5>
+                            <p class="text-secondary small flex-grow-1">
+                                A responsive Ride-sharing Web Interface with route selection, fare calculation preview, and Google Maps integration layout.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark border border-secondary text-info">HTML</span>
+                                <span class="badge bg-dark border border-secondary text-info">CSS Grid</span>
+                                <span class="badge bg-dark border border-secondary text-info">Bootstrap</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-custom btn-sm rounded-pill w-100">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card h-100 d-flex flex-column overflow-hidden">
+                        <img src="Jarifs classroom.jpg" alt="Jarif's Classroom Project" class="img-fluid" style="height: 200px; object-fit: cover;">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h5 class="fw-bold text-light">Jarif's Classroom</h5>
+                            <p class="text-secondary small flex-grow-1">
+                                An all-in-one educational platform landing page designed for university academic preparation and course management.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark border border-secondary text-info">HTML5</span>
+                                <span class="badge bg-dark border border-secondary text-info">Bootstrap 5</span>
+                                <span class="badge bg-dark border border-secondary text-info">JavaScript</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-custom btn-sm rounded-pill w-100">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card h-100 d-flex flex-column overflow-hidden">
+                        <img src="neon glow logo.png" alt="Creative UI Components" class="img-fluid" style="height: 200px; object-fit: cover;">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h5 class="fw-bold text-light">Neon UI Components</h5>
+                            <p class="text-secondary small flex-grow-1">
+                                A set of glowing CSS 3D buttons, animated cards, and responsive glassmorphism UI layouts for modern websites.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark border border-secondary text-info">CSS3 Animation</span>
+                                <span class="badge bg-dark border border-secondary text-info">Flexbox</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-custom btn-sm rounded-pill w-100">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-5">
+        <div class="container py-4">
+            <div class="mb-5">
+                <h2 class="fw-bold display-6 mb-1">Get In Touch</h2>
+                <div class="heading-line"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="custom-card p-4 h-100">
+                        <h4 class="fw-bold text-gradient mb-4">Contact Details</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-geo-alt fs-4 text-info me-3"></i>
+                            <div>
+                                <small class="text-secondary d-block">Location</small>
+                                <span>Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-envelope fs-4 text-info me-3"></i>
+                            <div>
+                                <small class="text-secondary d-block">Email</small>
+                                <span>contact@jarifclassroom.com</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="bi bi-phone fs-4 text-info me-3"></i>
+                            <div>
+                                <small class="text-secondary d-block">Phone / WhatsApp</small>
+                                <span>+880 1798-509723</span>
+                            </div>
+                        </div>
+
+                        <h6 class="fw-bold text-light mb-3">Follow Me:</h6>
+                        <div class="d-flex gap-3">
+                            <a href="https://web.facebook.com/people/Jarifs-Classroom/61589088166089/" target="_blank" class="btn btn-outline-secondary rounded-circle"><i class="bi bi-facebook"></i></a>
+                            <a href="https://youtube.com/@jarifclassroom2026" target="_blank" class="btn btn-outline-secondary rounded-circle"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="btn btn-outline-secondary rounded-circle"><i class="bi bi-github"></i></a>
+                            <a href="#" class="btn btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="custom-card p-4">
+                        <form id="portfolioForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small">Your Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small">Your Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small">Subject</label>
+                                    <input type="text" class="form-control" placeholder="Subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small">Message</label>
+                                    <textarea class="form-control" rows="4" placeholder="Write message..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-custom w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-4 border-top border-secondary border-opacity-25 text-center text-secondary">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 Md. Jafrul Islam Jarif. Designed & Developed with HTML, CSS & Bootstrap.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Form submission prevention for assignment demo
+        document.getElementById('portfolioForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent successfully.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
